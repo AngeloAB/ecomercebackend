@@ -19,7 +19,7 @@ const URL = process.env.MONGO_URL;
 mongoose.connect(URL);
 const db = mongoose.connection;
 db.on('error', (error) => console.error(error));
-db.once('open', () => console.log('Connected to Database'));
+db.once('open', () => console.log('Connected to BASE DE DATOS'));
 
 // Routes
 app.use('/categories', require('./routes/category'));
